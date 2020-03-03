@@ -13,6 +13,7 @@ public class Weapon : MonoBehaviour
     
     protected Camera cam;
     protected Vector3 rayHitPosition;
+    protected GameObject target;
     
     protected virtual void Start()
     {
@@ -42,6 +43,11 @@ public class Weapon : MonoBehaviour
         Debug.Log("current ammo: " + currentAmmo);
         if (currentAmmo>0)
         {
+            if (target)
+            {
+                
+            }
+            
             if (currentAmmo==1)
             {
                 isEmpty=true;
@@ -73,7 +79,7 @@ public class Weapon : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
-            rayHitPosition = hit.point;
+            target = hit.transform.gameObject;
         }
     }
 }
