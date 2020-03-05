@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 8545731659404095437}
   - component: {fileID: 8545731659404095434}
   - component: {fileID: 8545731659404095435}
-  - component: {fileID: 8545731659404095432}
+  - component: {fileID: 3521995245720601836}
   m_Layer: 0
   m_Name: SniperRifle
   m_TagString: Untagged
@@ -125,7 +125,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8545731659404095432
+--- !u!114 &3521995245720601836
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,9 +134,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8545731659404095430}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8aaaddfee87f1e4f92566a974b42cd2, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f6179b9277e31443b0eed366c868f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalAmmo: 10
-  magSize: 5
-  damage: 10
+  totalAmmo: 144
+  magSize: 7
+  damage: 1
+  hitParticles: {fileID: 895496094222788501, guid: 6bef8234766999e4dbeb602334464922,
+    type: 3}
+  fireRate: 0.2

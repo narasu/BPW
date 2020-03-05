@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SniperRifle : Weapon
+public interface IDamageable
 {
-    
+    void TakeDamage(int damage);
 }

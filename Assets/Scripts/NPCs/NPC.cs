@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPC : MonoBehaviour
+public class NPC : MonoBehaviour, IDamageable
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] protected int currentHealth;
+    
+    public void TakeDamage(int damageAmount)
     {
-        
-    }
+        //subtract damage amount
+        currentHealth -= damageAmount;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        //Check if health has fallen below zero
+        if (currentHealth <= 0) 
+        {
+            //if health has fallen below zero, deactivate it 
+            gameObject.SetActive (false);
+        }
     }
 }
