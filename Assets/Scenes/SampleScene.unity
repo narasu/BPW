@@ -387,7 +387,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 336458196}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &614687917
+--- !u!1001 &426625107
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -397,38 +397,22 @@ PrefabInstance:
     - target: {fileID: 8545731659404095430, guid: 4ca33cdb51d4d034eacf40be0a862e39,
         type: 3}
       propertyPath: m_Name
-      value: SniperRifle
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545731659404095432, guid: 4ca33cdb51d4d034eacf40be0a862e39,
-        type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545731659404095432, guid: 4ca33cdb51d4d034eacf40be0a862e39,
-        type: 3}
-      propertyPath: hitParticles
-      value: 
-      objectReference: {fileID: 895496094222788501, guid: 6bef8234766999e4dbeb602334464922,
-        type: 3}
-    - target: {fileID: 8545731659404095432, guid: 4ca33cdb51d4d034eacf40be0a862e39,
-        type: 3}
-      propertyPath: totalAmmo
-      value: 100
+      value: AssaultRifle
       objectReference: {fileID: 0}
     - target: {fileID: 8545731659404095433, guid: 4ca33cdb51d4d034eacf40be0a862e39,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.579
+      value: 0.551
       objectReference: {fileID: 0}
     - target: {fileID: 8545731659404095433, guid: 4ca33cdb51d4d034eacf40be0a862e39,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.467
+      value: -0.427
       objectReference: {fileID: 0}
     - target: {fileID: 8545731659404095433, guid: 4ca33cdb51d4d034eacf40be0a862e39,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.109
+      value: 1.529
       objectReference: {fileID: 0}
     - target: {fileID: 8545731659404095433, guid: 4ca33cdb51d4d034eacf40be0a862e39,
         type: 3}
@@ -472,6 +456,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ca33cdb51d4d034eacf40be0a862e39, type: 3}
+--- !u!4 &475938651 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8545731659404095433, guid: 4ca33cdb51d4d034eacf40be0a862e39,
+    type: 3}
+  m_PrefabInstance: {fileID: 426625107}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,12 +554,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!4 &708473619 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8545731659404095433, guid: 4ca33cdb51d4d034eacf40be0a862e39,
-    type: 3}
-  m_PrefabInstance: {fileID: 614687917}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &710391991
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,7 +708,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 708473619}
+  - {fileID: 475938651}
   m_Father: {fileID: 1065891701}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
