@@ -6,7 +6,6 @@ public class Enemy : MonoBehaviour, IDamageable
 {
     [SerializeField] protected int health;
 
-
     public void TakeDamage(int damageAmount)
     {
         //subtract damage amount

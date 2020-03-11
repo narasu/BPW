@@ -105,7 +105,7 @@ public abstract class Weapon : MonoBehaviour
         // Turn on line renderer
         laserLine.enabled = true;
 
-        //Wait for .07 seconds
+        //Wait for .x seconds
         yield return shotDuration;
 
         // Deactivate line renderer after waiting
