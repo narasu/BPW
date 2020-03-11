@@ -8,7 +8,7 @@ public class Pistol : Weapon
     {
         base.Update();
 
-        if (!isEmpty && Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             Shoot();
         }

@@ -319,7 +319,7 @@ GameObject:
   - component: {fileID: 336458197}
   - component: {fileID: 336458199}
   - component: {fileID: 336458198}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -394,10 +394,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 963194228}
     m_Modifications:
+    - target: {fileID: 3028333374072386686, guid: 4ca33cdb51d4d034eacf40be0a862e39,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521995245720601836, guid: 4ca33cdb51d4d034eacf40be0a862e39,
+        type: 3}
+      propertyPath: firingPoint
+      value: 
+      objectReference: {fileID: 627062389}
+    - target: {fileID: 3521995245720601836, guid: 4ca33cdb51d4d034eacf40be0a862e39,
+        type: 3}
+      propertyPath: laserLine
+      value: 
+      objectReference: {fileID: 884859162}
+    - target: {fileID: 3521995245720601836, guid: 4ca33cdb51d4d034eacf40be0a862e39,
+        type: 3}
+      propertyPath: fireRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521995245720601836, guid: 4ca33cdb51d4d034eacf40be0a862e39,
+        type: 3}
+      propertyPath: magSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521995245720601836, guid: 4ca33cdb51d4d034eacf40be0a862e39,
+        type: 3}
+      propertyPath: totalAmmo
+      value: 2800
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521995245720601836, guid: 4ca33cdb51d4d034eacf40be0a862e39,
+        type: 3}
+      propertyPath: raycastIgnoreLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 8545731659404095430, guid: 4ca33cdb51d4d034eacf40be0a862e39,
         type: 3}
       propertyPath: m_Name
       value: AssaultRifle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545731659404095430, guid: 4ca33cdb51d4d034eacf40be0a862e39,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8545731659404095433, guid: 4ca33cdb51d4d034eacf40be0a862e39,
         type: 3}
@@ -454,11 +494,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8020450958463868639, guid: 4ca33cdb51d4d034eacf40be0a862e39, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4ca33cdb51d4d034eacf40be0a862e39, type: 3}
 --- !u!4 &475938651 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8545731659404095433, guid: 4ca33cdb51d4d034eacf40be0a862e39,
+    type: 3}
+  m_PrefabInstance: {fileID: 426625107}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &627062389 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 950175343363712699, guid: 4ca33cdb51d4d034eacf40be0a862e39,
     type: 3}
   m_PrefabInstance: {fileID: 426625107}
   m_PrefabAsset: {fileID: 0}
@@ -627,6 +674,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710391991}
   m_CullTransparentMesh: 0
+--- !u!120 &884859162 stripped
+LineRenderer:
+  m_CorrespondingSourceObject: {fileID: 7419637884940498572, guid: 4ca33cdb51d4d034eacf40be0a862e39,
+    type: 3}
+  m_PrefabInstance: {fileID: 426625107}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,7 +692,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -740,7 +793,7 @@ GameObject:
   - component: {fileID: 1065891701}
   - component: {fileID: 1065891700}
   - component: {fileID: 1065891699}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}

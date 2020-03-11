@@ -2,20 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPC : MonoBehaviour, IDamageable
+public class Enemy : MonoBehaviour, IDamageable
 {
-    [SerializeField] protected int currentHealth;
-    
+    [SerializeField] protected int health;
+
+
     public void TakeDamage(int damageAmount)
     {
         //subtract damage amount
-        currentHealth -= damageAmount;
+        health -= damageAmount;
 
         //Check if health has fallen below zero
-        if (currentHealth <= 0) 
+        if (health <= 0)
         {
             //if health has fallen below zero, deactivate it 
-            gameObject.SetActive (false);
+            gameObject.SetActive(false);
         }
     }
 }
