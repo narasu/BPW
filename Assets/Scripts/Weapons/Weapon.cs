@@ -19,8 +19,10 @@ public abstract class Weapon : MonoBehaviour
 
     protected WaitForSeconds shotDuration = new WaitForSeconds(0.02f);    // WaitForSeconds object used by our ShotEffect coroutine, determines time laser line will remain visible
 
-    [SerializeField] protected LineRenderer laserLine;                                        // Reference to the LineRenderer component which will display our laserline
+    [SerializeField] protected LineRenderer laserLine;          // Reference to the LineRenderer component which will display our laserline
     [SerializeField] protected LayerMask raycastIgnoreLayer;
+    protected bool laserActive = false;
+    protected RaycastHit laserEndPos;
     protected bool invertMask = false;
 
 
@@ -43,6 +45,11 @@ public abstract class Weapon : MonoBehaviour
         }
     }
 
+    protected virtual void LateUpdate()
+    {
+        laserLine.SetPosition(0, firingPoint.position); //set the starting position of the laser line to the tip of the gun
+    }
+
     protected virtual void Shoot()
     {
         if (!isEmpty && currentAmmo>0)
@@ -50,8 +57,6 @@ public abstract class Weapon : MonoBehaviour
             //Ray ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
             Vector3 rayOrigin = cam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.0f));
             RaycastHit hit;
-
-            laserLine.SetPosition(0, firingPoint.position);
 
             LayerMask newMask = ~(invertMask ? ~raycastIgnoreLayer.value : raycastIgnoreLayer.value);
 
@@ -69,6 +74,7 @@ public abstract class Weapon : MonoBehaviour
                 laserLine.SetPosition(1, rayOrigin + (cam.transform.forward * weaponRange));
             }
 
+            laserActive = true;
             StartCoroutine(ShotEffect());
 
             if (currentAmmo == 1)
@@ -104,6 +110,7 @@ public abstract class Weapon : MonoBehaviour
 
         // Turn on line renderer
         laserLine.enabled = true;
+        laserActive = false;
 
         //Wait for .x seconds
         yield return shotDuration;

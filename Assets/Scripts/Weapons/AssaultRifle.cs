@@ -27,8 +27,5 @@ public class AssaultRifle : Weapon
                 fireTimer=0f;
             }
         }
-
     }
-
-
 }
